@@ -1,0 +1,4 @@
+.teamplayers{max-height: 450px;overflow-y: scroll;}
+.tradeplayers{max-height: 450px;overflow-y: scroll;}
+.payroll{background:lightgreen;}
+.teamplayers1>li.list-group-item.player{z-index: 1000;}

@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+	<title>NBA Trade Machine</title>
+	<!-- Bootstrap CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+	
+	<!-- Local CSS file -->
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+	
+</head>
+<body>
+	<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">NBATM</a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+			</ul>
+		</div>
+	</nav> -->
+	
+	
+<ul class="coll">
+  <li><a href="#">NBATM</a></li>
+  <li><a href="#">Home </a></li>
+	
+</ul>
+	
+	
+	
+	<div class="jumbotron">
+		<h1 class="display-4">NBA Trade Machine</h1>
+		<p class="lead">Make your trades</p>
+		<hr class="my-4">
+		<p>Use an easily designed trade machine to quickly and intelligently test out different trades between teams in the NBA.</p>
+		{% if user.is_authenticated %}
+		<p class="lead"><a class="btn btn-primary btn-lg" href="{% url 'trade' %}" role="button">Get Started</a></p>
+		{% else %}
+		<p class="lead"><a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Get Started</a></p>
+		{% endif %}
+	</div>
+	<div class="container">
+		<footer class="pt-4 my-md-5 pt-md-5 border-top">
+		    <div class="row">
+		      <div class="col">
+		        <img class="mb-2" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+		        <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+		      </div>
+		      <!-- <div class="col-6 col-md">
+		        <h5>Features</h5>
+		        <ul class="list-unstyled text-small">
+		          <li><a class="text-muted" href="#">Cool stuff</a></li>
+		          <li><a class="text-muted" href="#">Random feature</a></li>
+		          <li><a class="text-muted" href="#">Team feature</a></li>
+		          <li><a class="text-muted" href="#">Stuff for developers</a></li>
+		          <li><a class="text-muted" href="#">Another one</a></li>
+		          <li><a class="text-muted" href="#">Last time</a></li>
+		        </ul>
+		      </div>
+		      <div class="col-6 col-md">
+		        <h5>Resources</h5>
+		        <ul class="list-unstyled text-small">
+		          <li><a class="text-muted" href="#">Resource</a></li>
+		          <li><a class="text-muted" href="#">Resource name</a></li>
+		          <li><a class="text-muted" href="#">Another resource</a></li>
+		          <li><a class="text-muted" href="#">Final resource</a></li>
+		        </ul>
+		      </div> -->
+		      <div class="col">
+		        <h5>About</h5>
+		        <ul class="list-unstyled text-small">
+		          <li><a class="text-muted" href="#">Team</a></li>
+		          <li><a class="text-muted" href="#">Locations</a></li>
+		          <li><a class="text-muted" href="#">Privacy</a></li>
+		          <li><a class="text-muted" href="#">Terms</a></li>
+		        </ul>
+		      </div>
+		    </div>
+	    </footer>
+	</div>
+	
+
+	<!-- JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
+	</script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+	</script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
+	</script>
+</body>
+</html>
